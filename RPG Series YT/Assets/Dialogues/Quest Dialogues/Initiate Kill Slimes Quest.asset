@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4012eee35ca94ce47a828691bb4e77ac, type: 3}
+  m_Name: Initiate Kill Slimes Quest
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - character: {fileID: 11400000, guid: 89515ed9ee20c1a4bb5bc4c6a679c7cf, type: 2}
+    myText: Hey Link I have something I need you to do for me!
+    characterEmotion: 0
+  - character: {fileID: 11400000, guid: 644725dbee0d00548b0f8b641f7eee70, type: 2}
+    myText: Yeah what is it?
+    characterEmotion: 0
+  - character: {fileID: 11400000, guid: 89515ed9ee20c1a4bb5bc4c6a679c7cf, type: 2}
+    myText: Slimes have been taking over the town recently, do you think you could
+      help?
+    characterEmotion: 0
+  quest: {fileID: 11400000, guid: fb78161d955f80f458dbc74315654545, type: 2}
