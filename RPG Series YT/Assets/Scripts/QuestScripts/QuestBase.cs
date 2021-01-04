@@ -28,7 +28,9 @@ public class QuestBase : ScriptableObject {
 
     public virtual void InitializeQuest()
     {
+        IsCompleted = false;
         CurrentAmount = new int[RequiredAmount.Length];
+        QuestLogManager.instance.AddQuestToLog(this);
     }
 
     public void Evaluate()
@@ -37,6 +39,7 @@ public class QuestBase : ScriptableObject {
         {
             if(CurrentAmount[i] < RequiredAmount[i])
             {
+                //quest is not complete return!
                 return;
             }
         }
@@ -47,12 +50,16 @@ public class QuestBase : ScriptableObject {
             {
                 GameManager.instance.allDialogueTriggers[i].HasCompletedQuest = true;
                 GameManager.instance.allDialogueTriggers[i].CompletedQuestDialogue = completedQuestDialogue;
-                Debug.Log("We Found" + NPCTurnIn);
                 break;
             }
         }
 
+        IsCompleted = true;
         DialogueManager.instance.CompletedQuest = this;
+    }
 
+    public virtual string GetObjectiveList()
+    {
+        return null;
     }
 }

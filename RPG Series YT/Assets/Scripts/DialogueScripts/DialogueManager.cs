@@ -69,7 +69,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EnqueueDialogue(DialogueBase db)
     {
-        if (inDialogue || QuestManager.instance.InQuestUI || GameManager.instance.rewardManager.InQuestReward) return;
+        if (inDialogue || QuestManager.instance.InQuestUI || GameManager.instance.rewardManager.InQuestReward || QuestLogManager.instance.InQuestLog) return;
         buffer = true;
         inDialogue = true;
         StartCoroutine(BufferTimer());
@@ -224,8 +224,13 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            inDialogue = false;
+            Invoke("SetDialogueOff", 0.25f);
         }
+    }
+
+    public void SetDialogueOff()
+    {
+        inDialogue = false;
     }
 
     public void CloseOptions()

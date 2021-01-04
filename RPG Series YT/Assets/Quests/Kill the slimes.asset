@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Kill the slimes
   m_EditorClassIdentifier: 
   questName: Kill the Slimes!
-  questDescription: could you kill 2 slimes for me?
+  questDescription: could you kill 2 slimes for me? the slimes are really getting
+    out of hand.
   NPCTurnIn: {fileID: 11400000, guid: 5d8ff73f10d34ec458169bf0dba14851, type: 2}
   completedQuestDialogue: {fileID: 11400000, guid: 9c29a892901097447b1b025ba4bff31a,
     type: 2}
@@ -21,8 +22,8 @@ MonoBehaviour:
     itemRewards:
     - {fileID: 11400000, guid: 210c0433896bc7b44964b86206181c3d, type: 2}
     - {fileID: 11400000, guid: edc0ca69fe76239448738c4d3fd35f80, type: 2}
-    experienceReward: 0
-    goldReward: 0
+    experienceReward: 150
+    goldReward: 100
   objectives:
   - requiredEnemy: {fileID: 11400000, guid: cc8676d4f08d4e440a75b362d8d92221, type: 2}
     requiredAmount: 2
